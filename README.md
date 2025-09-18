@@ -186,23 +186,29 @@ To allow access securely:
 
 ### 🖥️ Connect to the VM
 
-On your local machine(Verify the private key exists), run: 
+On your local machine(Verify the private key exists), run:
 
 ```bash
 ls -l ~/Downloads/honeypot-lab2_key.pem
+```
 
 Lock the key file permissions (required by ssh):
 
 ```bash
 chmod 600 ~/Downloads/honeypot-lab2_key.pem   # Secure the key
+```
 
 ![check key](images/ssh-secure.png)
 
 
 Connect to the VM (default SSH port 22):
 
+```bash
 ssh -i ~/Downloads/honeypot-lab2_key.pem azureuser@<AZUREPublic-IP>
+```
 
-![Connection](images/ssh-connection.png) 
+![Connection](images/ssh-connection.png)
+
+
  
  
