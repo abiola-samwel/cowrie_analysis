@@ -218,6 +218,8 @@ ssh -i ~/Downloads/honeypot-lab2_key.pem azureuser@<AZUREPublic-IP>
 
 ![Connection](images/ssh-connection.png)
 
+✅ **End of Part One: Honeypot Deployment**  
+👉 Continue to **Part Two: Honeypot Analysis** for insights and findings. *(Coming Soon)* 🚀
 
  
  
