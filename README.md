@@ -1,9 +1,9 @@
-# 🛡️ Honeypot Lab Deployment Guide (Azure)
+#  Honeypot Lab Deployment Guide (Azure)
 
 This guide documents how I deployed a **T-Pot Honeypot Lab** on Microsoft Azure.  
 The purpose of this lab is to simulate vulnerable systems (honeypots) that attract attackers.  
 By analyzing their activity, we gain insight into attack methods, tools, and behaviors.  
-# 🛡️ Introduction: What is a Honeypot?
+#  Introduction: What is a Honeypot?
 
 A **honeypot** is a deliberately exposed system or service designed to attract attackers.  
 Instead of protecting valuable assets directly, a honeypot acts as a **decoy target** that lures malicious actors.  
@@ -23,7 +23,7 @@ Instead of protecting valuable assets directly, a honeypot acts as a **decoy tar
 
 ---
 
-## 🔧 Pre-requisites
+##  Pre-requisites
 
 Before you begin, ensure you have:
 
@@ -31,7 +31,7 @@ Before you begin, ensure you have:
 - Basic understanding of **Linux commands** and SSH  
 - Ability to download and use **SSH keys** (`.pem` file)  
 
-# 🚀 Create a VM in Azure Portal
+#  Create a VM in Azure Portal
 
 1. Go to **[Azure Portal](https://portal.azure.com)**  
 2. Navigate to **Virtual Machines**  
@@ -141,9 +141,9 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 
 ## 8. Review + Create
 
-🔑 Generate & Download SSH Key
+ Generate & Download SSH Key
 - Double-check **SSH Key authentication** is enabled.  
-👉 At this step, Azure will prompt you to **generate a new key pair**.  
+ At this step, Azure will prompt you to **generate a new key pair**.  
 Now, **download the private key (`.pem` file)** and save it in a safe location (e.g., `~/Downloads`).  
 
 ⚠️ **Note:** If you lose this `.pem` file, you will not be able to log in to the VM later. Azure will not let you re-download it.
