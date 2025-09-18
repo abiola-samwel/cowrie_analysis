@@ -1,8 +1,15 @@
-#  Honeypot Lab Deployment Guide (Azure)
+# Honeypot Lab (Azure) – Deployment & Analysis
 
-This guide documents how I deployed a **T-Pot Honeypot Lab** on Microsoft Azure.  
-The purpose of this lab is to simulate vulnerable systems (honeypots) that attract attackers.  
-By analyzing their activity, we gain insight into attack methods, tools, and behaviors.  
+In this project, I set up and analyzed a **honeypot environment** on Microsoft Azure to study real-world attacker behavior.  
+
+- **Part 1 – Deployment:**  
+  I deployed a **T-Pot Honeypot Lab** in Azure, configured network security rules, and redirected exposed SSH traffic into the **Cowrie honeypot** for safe monitoring.  
+
+- **Part 2 – Analysis:**  
+  I collected logs from Cowrie, built a **Python-based analyzer** to process attacker IPs, credentials, and executed commands, and visualized the findings in a **SOC-style dashboard**.  
+
+The objective was not only to demonstrate how to **deploy honeypots in the cloud**, but also to practice how a **Security Operations Center (SOC)** transforms raw logs into **actionable security intelligence**. This provided hands-on experience in both **cloud security architecture** and **threat analysis**.
+
 #  Introduction: What is a Honeypot?
 
 A **honeypot** is a deliberately exposed system or service designed to attract attackers.  
