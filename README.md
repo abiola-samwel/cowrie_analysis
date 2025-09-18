@@ -38,7 +38,7 @@ Before you begin, ensure you have:
 3. Click **Create → Azure Virtual Machine**
 ⚠️ **Note on Azure Costs**  
 > Running virtual machines continuously on Azure will consume credits or incur charges.  
-> For this project, I am using the **free Azure credit** provided with my account.  
+> For this project, I am using the ** $200 free Azure credit** provided with my account.  
 > To avoid unexpected costs:  
 > - Use the **smallest VM size** that meets requirements  
 > - Enable **Auto-shutdown** when the VM is not in use  
