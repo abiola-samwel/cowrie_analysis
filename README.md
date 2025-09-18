@@ -10,7 +10,9 @@ In this project, I set up and analyzed a **honeypot environment** on Microsoft A
 
 The objective was not only to demonstrate how to **deploy honeypots in the cloud**, but also to practice how a **Security Operations Center (SOC)** transforms raw logs into **actionable security intelligence**. This provided hands-on experience in both **cloud security architecture** and **threat analysis**.
 
-#  Introduction: What is a Honeypot?
+# Part One: Honeypot Deployment
+
+## Introduction – What is a Honeypot?
 
 A **honeypot** is a deliberately exposed system or service designed to attract attackers.  
 Instead of protecting valuable assets directly, a honeypot acts as a **decoy target** that lures malicious actors.  
