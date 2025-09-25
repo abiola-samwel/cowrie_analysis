@@ -29,7 +29,6 @@ In this phase, I set up **T-Pot**, an all-in-one honeypot platform that integrat
 ## 1. Verify your public IP (on your local Kali)
 ```bash
 curl -s https://ifconfig.me
-
 ```
 Use this IP when creating / changing NSG rules.
 
@@ -61,7 +60,7 @@ ssh-keygen -R "[IP]:64295"
 ```bash
 ssh -i /home/barry/Downloads/honeypot_key.pem honeypotlab@<Your Azure Ip>
 # If the installer later changes the port, use:
-# ssh -i /home/barry/Downloads/honeypot_key.pem -p 64295 honeypotlab@Your Azure Ip>
+# ssh -i /home/barry/Downloads/honeypot_key.pem -p 64295 honeypotlab@<Your Azure Ip>
 ```
 
 Accept the host fingerprint on first connect by typing `yes`.
@@ -108,9 +107,9 @@ sudo sysctl -p /etc/sysctl.d/99-elastic.conf
 Add Docker GPG key & repo, then install:
 ```bash
 # Add key and repository
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor   -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg]   https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -148,10 +147,10 @@ sudo rm -f /etc/apt/sources.list.d/docker.list
 sudo rm -f /etc/apt/keyrings/docker.gpg
 sudo mkdir -p /usr/share/keyrings
 # recreate the expected keyring (run the curl+gpg command above to write docker-archive-keyring.gpg)
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor   -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 # re-create the docker.list using the key in /usr/share/keyrings
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg]   https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -176,7 +175,7 @@ chmod +x ./install.sh
 
 Run the installer as a normal user (example uses hive/full install and provides web credentials):
 ```bash
-./install.sh -t h -u <your userbame> -p '@<your upassword>'
+./install.sh -t h -u <your username> -p '@<your password>'
 ```
 
 **Important**: Do **not** prefix with `sudo`. The script checks and will refuse to run as root.
@@ -191,7 +190,8 @@ Run the installer as a normal user (example uses hive/full install and provides 
 - Web UI username/password → you passed `-u` and `-p`; confirm when asked
 
 The installer will download many images and set up multiple containers. This can take few minutes.
-![T-Pot Installation](images/installer.png)
+![T-Pot Installation](../images/installer.png)
+
 ---
 
 ## 11. Installer failure mid-way (ssh port changed) & how to recover
@@ -199,7 +199,7 @@ The installer will download many images and set up multiple containers. This can
 - If your SSH client reports host key changed, remove old host key on your Kali:
 ```bash
 ssh-keygen -R <ip>
-ssh-keygen -R "[1p]:64295"
+ssh-keygen -R "[ip]:64295"
 ```
 - Add NSG inbound rule for the new SSH port (64295) in Azure Portal before trying to reconnect.
 - Reconnect:
@@ -223,7 +223,6 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 ```
 ![Running Containers](../images/running-containers.png)
 
-
 You should see `nginx` mapping `64297->64297/tcp` and many honeypot containers (cowrie, dionaea, elasticsearch, kibana, etc.).
 
 ---
@@ -242,8 +241,8 @@ curl -k https://azure ip:64297
 ```
 Open `https://azure ip:64297` in a browser and login with the web UI credentials.
 
-
 ![Dashboard](../images/dashboard.png)
+
 ---
 
 ## 14. Secure SSH (on VM) — finalize hardening
@@ -312,12 +311,7 @@ az group delete -n honeypot-vm --yes --no-wait
 
 ---
 
-
-
 ## Final notes
 - Keep the snapshot handy in case you need to revert.  
 - Monitor disk usage (Elastic can grow) and rotate logs if you plan long-running capture.  
 - Only open dashboard/SSH ports to your IP for safety.
-
----
-
