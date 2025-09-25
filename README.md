@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/dashboard.png" alt="T-Pot Dashboard Banner" width="100%">
+</p>
+
 # Honeypot Lab (Azure) – Deployment & Analysis
 
 In this project, I set up and analyzed a **honeypot environment** on Microsoft Azure to study real-world attacker behavior.  
