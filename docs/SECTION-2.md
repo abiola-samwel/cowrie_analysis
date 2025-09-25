@@ -243,7 +243,7 @@ curl -k https://azure ip:64297
 Open `https://azure ip:64297` in a browser and login with the web UI credentials.
 
 
-![Dashboard](..images/dashboard.png)
+![Dashboard](../images/dashboard.png)
 ---
 
 ## 14. Secure SSH (on VM) — finalize hardening
