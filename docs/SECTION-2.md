@@ -1,4 +1,4 @@
-# Part Two: Honeypot Analysis
+# Part Two: T-Pot Installation Guide (Installation Phase) and Analysis + Findings
 
 ## 🔧 T-Pot Installation Guide (Installation Phase)
 
@@ -311,7 +311,3 @@ az group delete -n honeypot-vm --yes --no-wait
 
 ---
 
-## Final notes
-- Keep the snapshot handy in case you need to revert.  
-- Monitor disk usage (Elastic can grow) and rotate logs if you plan long-running capture.  
-- Only open dashboard/SSH ports to your IP for safety.
