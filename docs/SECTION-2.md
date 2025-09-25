@@ -221,7 +221,7 @@ Check running containers:
 ```bash
 docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 ```
-![Running Containers](images/running-containers.png)
+![Running Containers](..images/running-containers.png)
 
 You should see `nginx` mapping `64297->64297/tcp` and many honeypot containers (cowrie, dionaea, elasticsearch, kibana, etc.).
 
@@ -242,7 +242,7 @@ curl -k https://azure ip:64297
 Open `https://azure ip:64297` in a browser and login with the web UI credentials.
 
 
-![Dashboard](images/dashboard.png)
+![Dashboard](..images/dashboard.png)
 ---
 
 ## 14. Secure SSH (on VM) — finalize hardening

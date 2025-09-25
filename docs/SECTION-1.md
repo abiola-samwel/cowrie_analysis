@@ -42,7 +42,7 @@ Before you begin, ensure you have:
 > - Enable **Auto-shutdown** when the VM is not in use  
 > - **Delete the VM and related resources** (public IP, disks, NICs) when finished  
 
- ![create](images/create.png)
+ ![create](..images/create.png)
 ---
 
 ## 1. Basics
@@ -59,7 +59,7 @@ Before you begin, ensure you have:
 - **Image**: Ubuntu Server 24.04 LTS – Gen2  
 - **Size**: Standard E2s v3 (2 vCPUs, 16 GiB memory)  
 
-![Basics Tab](images/basic-tab.png)
+![Basics Tab](..images/basic-tab.png)
 
 ### 🔑 Authentication (Important!)
 
@@ -84,7 +84,7 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 - **Use managed disks**: Yes  
 - **Delete OS disk with VM**: Enabled  
 
- ![Disks Tab](images/disk-tab.png)
+ ![Disks Tab](..images/disk-tab.png)
 ---
 
 ## 3. Networking
@@ -96,7 +96,7 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 - **Load balancer**: None  
 - **Delete NIC & IP with VM**: Enabled  
 
-![Networking Tab](images/network-tab.png)
+![Networking Tab](..images/network-tab.png)
  
 ---
 
@@ -107,7 +107,7 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 - **Auto-shutdown**: On  
 - **Backup**: Disabled  
  
- ![Management Tab](images/management-tab.png)
+ ![Management Tab](..images/management-tab.png)
 ---
 
 ## 5. Monitoring
@@ -116,7 +116,7 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 - **OS guest diagnostics**: Off  
 - **Application health monitoring**: Off  
 
- ![Monitoring Tab](images/monitoring-tab.png)
+ ![Monitoring Tab](..images/monitoring-tab.png)
 ---
 
 ## 6. Advanced
@@ -125,7 +125,7 @@ SSH keys are much more secure and prevent brute-force attacks. Since honeypots w
 - **Cloud init / User data**: None  
 - **Disk controller**: SCSI  
  
- ![Advanced Tab](images/advanced-tab.png)
+ ![Advanced Tab](..images/advanced-tab.png)
 ---
 
 ## 7. Tags
@@ -146,19 +146,19 @@ Now, **download the private key (`.pem` file)** and save it in a safe location (
 
 ⚠️ **Note:** If you lose this `.pem` file, you will not be able to log in to the VM later. Azure will not let you re-download it.
 
-![SSH Key](images/key.png)
+![SSH Key](..images/key.png)
 
 - Click **Create** to deploy your VM.  
 After configuring all tabs and confirming your settings, click **Review + Create** to start deployment.  
 Please wait a few minutes while Azure provisions your VM.
 
-![Deploy Tab](images/deploy-tab.png)
+![Deploy Tab](..images/deploy-tab.png)
  
 ## ✅ Deployment Complete
 
 Once the deployment has finished successfully, click **Go to Resource** to open your newly created VM.
 
-![Done](images/done.png) 
+![Done](..images/done.png) 
 ---
  
 
@@ -180,7 +180,7 @@ To allow access securely:
    
    Ensure your SSH configuration is correct for accessing the VM.  
 
-![SSH Config](images/shh-config.png)
+![SSH Config](..images/shh-config.png)
 
 ### 🖥️ Connect to the VM
 
@@ -196,7 +196,7 @@ Lock the key file permissions (required by ssh):
 chmod 600 ~/Downloads/honeypot-lab2_key.pem   # Secure the key
 ```
 
-![check key](images/ssh-secure.png)
+![check key](..images/ssh-secure.png)
 
 
 Connect to the VM (default SSH port 22):
@@ -205,7 +205,7 @@ Connect to the VM (default SSH port 22):
 ssh -i ~/Downloads/honeypot-lab2_key.pem azureuser@<AZUREPublic-IP>
 ```
 
-![Connection](images/ssh-connection.png)
+![Connection](..images/ssh-connection.png)
 
 ✅ **End of Part One: Honeypot Deployment**  
 👉 Continue to **Part Two: Honeypot Analysis** for insights and findings. *(Coming Soon)* 🚀
