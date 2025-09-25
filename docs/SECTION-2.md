@@ -221,7 +221,8 @@ Check running containers:
 ```bash
 docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 ```
-![Running Containers](..images/running-containers.png)
+![Running Containers](../images/running-containers.png)
+
 
 You should see `nginx` mapping `64297->64297/tcp` and many honeypot containers (cowrie, dionaea, elasticsearch, kibana, etc.).
 
