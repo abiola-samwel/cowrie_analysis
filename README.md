@@ -14,5 +14,5 @@ The objective was not only to demonstrate how to **deploy honeypots in the cloud
 
 ## 📑 Project Sections
 
-- [Part One: Honeypot Deployment](README.md)  
+- [Part One: Honeypot Deployment](docs/SECTION-1.md)
 - [Part Two: Honeypot Analysis](docs/SECTION-2.md)
