@@ -112,7 +112,7 @@ scp honeypotlab@<VM-IP>:~/cowrie_analysis/analysis_output/top_ips.png .
 ## 🖥️ Tool in Action
 
 <p align="center">
-  <img src="images/tool.png" alt="Live Dashboard Screenshot" width="100%">
+  <img src="images/key.png" alt="Live Dashboard Screenshot" width="100%">
 </p>
 
 *Figure 2: The interactive terminal dashboard (`live_dashboard.py`) showing top attacker IPs and credential attempts.*
