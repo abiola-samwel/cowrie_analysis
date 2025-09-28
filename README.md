@@ -25,3 +25,10 @@ The objective was not only to demonstrate how to **deploy honeypots in the cloud
 - [Part One: Honeypot Deployment](docs/SECTION-1.md)  
 - [Part Two: Honeypot Analysis](docs/SECTION-2.md)  
 - [Part Three: Project Structure & Repo Organization](docs/SECTION-3.md)  
+
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](../LICENSE).
