@@ -31,4 +31,4 @@ The objective was not only to demonstrate how to **deploy honeypots in the cloud
 
 ## 📜 License
 
-This project is licensed under the [MIT License](../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
